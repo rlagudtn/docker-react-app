@@ -1,0 +1,8 @@
+FROM node:alpine
+WORKDIR /usr/src/app
+COPY package.json ./
+RUN npm install
+COPY ./ ./
+CMD ["npm","run","start"]
+
+# dev file은 옵션을 따로 줘야됨
